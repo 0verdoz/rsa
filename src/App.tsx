@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StageId, RSAKeys, EncryptedBlock } from './types';
 import { modInverse, modPow, stringToMessageNumbers } from './lib/rsaMath';
 import { Navbar } from './components/Navbar';
@@ -22,6 +22,11 @@ const DEFAULT_D = modInverse(DEFAULT_E, DEFAULT_PHI) || 2753;
 export default function App() {
   const [currentStage, setCurrentStage] = useState<StageId>('INTRO');
   const [isTutorOpen, setIsTutorOpen] = useState<boolean>(false);
+
+  // Scroll to top of page on stage transition
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentStage]);
 
   // RSA Keys state
   const [keys, setKeys] = useState<RSAKeys>({
