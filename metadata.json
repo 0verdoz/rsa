@@ -1,0 +1,6 @@
+{
+  "name": "RSA Cryptography Gamified Visualizer",
+  "description": "An interactive story-driven visualizer for RSA Public Key Cryptography featuring Bello, Nii, and Paulson with prime multiplication, modular clock arithmetic, key forge, and cryptanalysis mini-games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
