@@ -65,7 +65,7 @@ export const Stage0Intro: React.FC<Stage0IntroProps> = ({ onStart }) => {
               </span>
               <div>
                 <strong className="text-rose-900 block text-sm font-extrabold">Bello Locks Her Message</strong>
-                Bello puts her message in a box, snaps Nii's open padlock shut, and sends it back across the internet. Anyone can snap an open padlock shut, but only Nii has the secret key!
+                Bello puts his message in a box, snaps Nii's open padlock shut, and sends it back across the internet. Anyone can snap an open padlock shut, but only Nii has the secret key!
               </div>
             </div>
 

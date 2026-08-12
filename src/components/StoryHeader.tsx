@@ -41,7 +41,7 @@ export const StoryHeader: React.FC<StoryHeaderProps> = ({ stage }) => {
         return {
           title: 'Chapter 5: Paulson\'s Cryptanalysis Lab',
           aliceSpeak: "Will Paulson be able to decipher my transmission?",
-          bobSpeak: "Even if Paulson intercepts C and (n,e), she would need to factor n into p and q to break the encryption!",
+          bobSpeak: "Even if Paulson intercepts C and (n,e), he would need to factor n into p and q to break the encryption!",
           eveSpeak: "Let me fire up my factorization algorithms and brute-force tools! Watch how hard it gets as prime sizes grow!",
         };
       case 'DECRYPTION':

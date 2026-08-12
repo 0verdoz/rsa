@@ -122,7 +122,7 @@ export const Stage4EveInterception: React.FC<Stage4EveInterceptionProps> = ({
         </div>
 
         <p className="text-xs text-slate-700 font-medium">
-          If Paulson can factor <strong className="text-blue-700 font-bold">p</strong> and <strong className="text-purple-700 font-bold">q</strong> such that <span className="font-mono text-blue-700 font-bold">p × q = {keys.n}</span>, she can derive <span className="font-mono text-purple-700 font-bold">φ(n)</span> and compute private key <strong className="text-rose-700 font-bold">d</strong>!
+          If Paulson can factor <strong className="text-blue-700 font-bold">p</strong> and <strong className="text-purple-700 font-bold">q</strong> such that <span className="font-mono text-blue-700 font-bold">p × q = {keys.n}</span>, he can derive <span className="font-mono text-purple-700 font-bold">φ(n)</span> and compute private key <strong className="text-rose-700 font-bold">d</strong>!
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-3">
