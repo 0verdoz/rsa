@@ -89,7 +89,7 @@ export default function App() {
   const unlockedCount = Object.values(stageProgress).filter(Boolean).length;
 
   return (
-    <div id="rsa-visualizer-app" className="min-h-screen bg-slate-950 text-slate-100 font-sans flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+    <div id="rsa-visualizer-app" className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col antialiased selection:bg-blue-600 selection:text-white">
       {/* Navigation Header */}
       <Navbar
         currentStage={currentStage}
@@ -101,7 +101,7 @@ export default function App() {
       />
 
       {/* Main Body */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-6">
         {/* Story Character Dialogue Banner */}
         <StoryHeader stage={currentStage} />
 
@@ -158,14 +158,19 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-950 border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>RSA Cryptography Gamified Visualizer — Public Key Security & Modular Arithmetic</span>
-          <span className="font-mono text-indigo-400">c ≡ m^e (mod n) ↔ m ≡ c^d (mod n)</span>
+      <footer className="bg-slate-900 border-t-4 border-blue-600 py-6 text-center text-xs text-slate-300 mt-12">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center space-x-2">
+            <span className="font-bold text-white text-sm">RSA Cryptography Gamified Visualizer</span>
+            <span className="text-slate-400">— Group 34 Presentation System</span>
+          </div>
+          <span className="font-mono bg-slate-800 text-blue-300 px-3 py-1 rounded-md border border-slate-700 font-semibold text-xs">
+            C ≡ M^e (mod n) &nbsp;↔&nbsp; M ≡ C^d (mod n)
+          </span>
         </div>
       </footer>
 
-      {/* Professor Cyber AI Tutor Drawer */}
+      {/* Professor Cyber AI Tutor Modal */}
       <AITutorModal
         isOpen={isTutorOpen}
         onClose={() => setIsTutorOpen(false)}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StageId } from '../types';
-import { User, ShieldAlert, Cpu, HelpCircle } from 'lucide-react';
+import { User, ShieldAlert, Cpu, MessageSquare } from 'lucide-react';
 
 interface StoryHeaderProps {
   stage: StageId;
@@ -64,66 +64,63 @@ export const StoryHeader: React.FC<StoryHeaderProps> = ({ stage }) => {
   const narrative = getStageNarrative();
 
   return (
-    <div id="story-header-container" className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-6 mb-6 shadow-xl backdrop-blur">
-      <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-        <h2 className="text-lg sm:text-xl font-bold text-white flex items-center space-x-2">
-          <Cpu className="w-5 h-5 text-indigo-400" />
+    <div id="story-header-container" className="bg-white border border-slate-300 rounded-2xl p-4 sm:p-6 mb-6 shadow-sm">
+      <div className="flex items-center justify-between border-b border-slate-200 pb-3 mb-4">
+        <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 flex items-center space-x-2">
+          <MessageSquare className="w-5 h-5 text-blue-600" />
           <span>{narrative.title}</span>
         </h2>
-        <span className="text-xs bg-slate-800 text-indigo-300 border border-indigo-900/60 px-2.5 py-1 rounded-full font-mono">
-          Interactive Narrative
+        <span className="text-xs bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 rounded-full font-bold">
+          Interactive Story Dialogue
         </span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* Bello (Alice) */}
-        <div id="character-bello" className="bg-slate-950/80 border border-pink-900/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-pink-500/50 transition-all">
-          <div className="flex items-center space-x-2.5 mb-2">
-            <div className="w-8 h-8 rounded-full bg-pink-500/20 border border-pink-500/50 flex items-center justify-center text-pink-300 font-bold text-sm">
+        {/* Bello (Alice) - Pink / Rose theme */}
+        <div id="character-bello" className="bg-rose-50/50 border border-rose-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-md transition-all">
+          <div className="flex items-center space-x-3 mb-2.5">
+            <div className="w-9 h-9 rounded-full bg-rose-600 text-white flex items-center justify-center font-extrabold text-sm shadow-sm">
               B
             </div>
             <div>
-              <span className="font-bold text-pink-300 text-sm">Bello</span>
-              <span className="text-[10px] text-pink-400/70 block">Sender</span>
+              <span className="font-extrabold text-rose-900 text-sm">Bello</span>
+              <span className="text-xs text-rose-600 font-semibold block">Sender</span>
             </div>
           </div>
-          <div className="bg-slate-900/90 border border-pink-900/30 rounded-lg p-2.5 text-xs text-slate-300 relative">
-            <div className="absolute -top-1.5 left-3 w-2.5 h-2.5 bg-slate-900 border-t border-l border-pink-900/30 rotate-45"></div>
-            <p className="italic">"{narrative.aliceSpeak}"</p>
+          <div className="bg-white border border-rose-200 rounded-lg p-3 text-xs text-slate-800 shadow-2xs relative">
+            <p className="italic font-medium text-slate-700">"{narrative.aliceSpeak}"</p>
           </div>
         </div>
 
-        {/* Nii (Bob) */}
-        <div id="character-nii" className="bg-slate-950/80 border border-cyan-900/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-cyan-500/50 transition-all">
-          <div className="flex items-center space-x-2.5 mb-2">
-            <div className="w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-500/50 flex items-center justify-center text-cyan-300 font-bold text-sm">
+        {/* Nii (Bob) - Blue / Cyan theme */}
+        <div id="character-nii" className="bg-blue-50/50 border border-blue-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-md transition-all">
+          <div className="flex items-center space-x-3 mb-2.5">
+            <div className="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center font-extrabold text-sm shadow-sm">
               N
             </div>
             <div>
-              <span className="font-bold text-cyan-300 text-sm">Nii</span>
-              <span className="text-[10px] text-cyan-400/70 block">Receiver & Key Maker</span>
+              <span className="font-extrabold text-blue-900 text-sm">Nii</span>
+              <span className="text-xs text-blue-600 font-semibold block">Receiver & Key Maker</span>
             </div>
           </div>
-          <div className="bg-slate-900/90 border border-cyan-900/30 rounded-lg p-2.5 text-xs text-slate-300 relative">
-            <div className="absolute -top-1.5 left-3 w-2.5 h-2.5 bg-slate-900 border-t border-l border-cyan-900/30 rotate-45"></div>
-            <p className="italic">"{narrative.bobSpeak}"</p>
+          <div className="bg-white border border-blue-200 rounded-lg p-3 text-xs text-slate-800 shadow-2xs relative">
+            <p className="italic font-medium text-slate-700">"{narrative.bobSpeak}"</p>
           </div>
         </div>
 
-        {/* Paulson (Eve) */}
-        <div id="character-paulson" className="bg-slate-950/80 border border-amber-900/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-amber-500/50 transition-all">
-          <div className="flex items-center space-x-2.5 mb-2">
-            <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-amber-300 font-bold text-sm">
+        {/* Paulson (Eve) - Amber / Red theme */}
+        <div id="character-paulson" className="bg-amber-50/50 border border-amber-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-md transition-all">
+          <div className="flex items-center space-x-3 mb-2.5">
+            <div className="w-9 h-9 rounded-full bg-amber-600 text-white flex items-center justify-center font-extrabold text-sm shadow-sm">
               P
             </div>
             <div>
-              <span className="font-bold text-amber-300 text-sm">Paulson</span>
-              <span className="text-[10px] text-amber-400/70 block">The Eavesdropper</span>
+              <span className="font-extrabold text-amber-900 text-sm">Paulson</span>
+              <span className="text-xs text-amber-700 font-semibold block">The Eavesdropper</span>
             </div>
           </div>
-          <div className="bg-slate-900/90 border border-amber-900/30 rounded-lg p-2.5 text-xs text-slate-300 relative">
-            <div className="absolute -top-1.5 left-3 w-2.5 h-2.5 bg-slate-900 border-t border-l border-amber-900/30 rotate-45"></div>
-            <p className="italic">"{narrative.eveSpeak}"</p>
+          <div className="bg-white border border-amber-200 rounded-lg p-3 text-xs text-slate-800 shadow-2xs relative">
+            <p className="italic font-medium text-slate-700">"{narrative.eveSpeak}"</p>
           </div>
         </div>
       </div>
