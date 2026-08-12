@@ -88,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
 
             {/* AI Tutor Button - High Visibility Yellow Accent like textbook visualizer */}
-            <button
+            {/* <button
               id="ai-tutor-btn"
               onClick={onOpenTutor}
               className="inline-flex items-center space-x-1.5 bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-extrabold px-3.5 py-2 rounded-lg shadow transition-all transform hover:scale-[1.02] active:scale-95 cursor-pointer"
@@ -96,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Sparkles className="w-4 h-4 text-slate-950" />
               <span className="hidden sm:inline">Ask Prof. Cyber</span>
               <span className="sm:hidden">Tutor</span>
-            </button>
+            </button> */}
 
             {/* Reset Button */}
             <button
