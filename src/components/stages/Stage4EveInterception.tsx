@@ -72,7 +72,7 @@ export const Stage4EveInterception: React.FC<Stage4EveInterceptionProps> = ({
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl font-medium">
               Paulson intercepted <strong className="text-blue-700 font-bold">Public Key (n={keys.n}, e={keys.e})</strong> and <strong className="text-rose-700 font-bold">Ciphertext [{encryptedBlocks.map(b => b.cipher).join(', ')}]</strong>.
-              Can she break the encryption?
+              Can he break the encryption?
             </p>
           </div>
         </div>

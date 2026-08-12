@@ -178,7 +178,7 @@ export const Stage2KeyForge: React.FC<Stage2KeyForgeProps> = ({
             </div>
           </div>
           <p className="text-xs text-slate-700 mt-3 font-medium">
-            Published freely. Bello uses <strong className="text-blue-900 font-bold">{`PU = {${keys.e}, ${keys.n}}`}</strong> to encrypt her message: <span className="font-mono font-bold">C = M^e mod n</span>.
+            Published freely. Bello uses <strong className="text-blue-900 font-bold">{`PU = {${keys.e}, ${keys.n}}`}</strong> to encrypt his message: <span className="font-mono font-bold">C = M^e mod n</span>.
           </p>
         </div>
 
